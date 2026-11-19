@@ -1,56 +1,91 @@
-# İkinci El Araç Fiyat Tahmini
+# İkinci El Araç Fiyat Tahmin Sistemi
 
-Bu proje, ikinci el araçların teknik ve fiziksel özelliklerini kullanarak araç fiyatlarını tahmin etmeyi amaçlamaktadır. Python programlama dili ve makine öğrenmesi yöntemleri kullanılarak veri analizi gerçekleştirilmektedir.
+## Proje Hakkında
+
+Bu proje, makine öğrenmesi algoritmalarını kullanarak ikinci el araçların satış fiyatlarını tahmin etmeyi amaçlamaktadır. Kaggle platformundan alınan araç verileri analiz edilerek fiyat tahmini için farklı makine öğrenmesi modelleri geliştirilmiştir.
+
+## Projenin Amacı
+
+İkinci el araç piyasasında fiyatlar; aracın markası, modeli, üretim yılı, kilometresi ve teknik özellikleri gibi birçok faktöre bağlı olarak değişmektedir.
+
+Projenin amacı, bu değişkenleri kullanarak araç fiyatlarını tahmin edebilen bir makine öğrenmesi sistemi geliştirmek ve farklı algoritmaların performanslarını karşılaştırmaktır.
+
+## Kullanılan Veri Seti
+
+**Used Car Price Prediction Dataset**
+
+Kaynak: [Kaggle - Used Car Price Prediction](https://www.kaggle.com/datasets/taeefnajib/used-car-price-prediction-dataset)
+
+Veri setinde aşağıdaki değişkenler bulunmaktadır:
+
+- Brand
+- Model
+- Model Year
+- Mileage
+- Fuel Type
+- Engine
+- Transmission
+- Exterior Color
+- Interior Color
+- Accident
+- Clean Title
+- Price
 
 ## Kullanılan Teknolojiler
 
 - Python
-- Pandas
-- Matplotlib
-- Scikit-learn
 - Google Colab
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
 
-## Veri Seti
+## Kullanılan Makine Öğrenmesi Algoritmaları
 
-- **Veri seti:** Used Car Price Prediction Dataset
-- **Hazırlayan:** Taeef Najib
-- **Kaynak:** [Kaggle](https://www.kaggle.com/datasets/taeefnajib/used-car-price-prediction-dataset)
-- **Kayıt sayısı:** 4.009
-- **Sütun sayısı:** 12
-- **Format:** CSV
+### 1. Linear Regression
 
-Veri setinde araç markası, modeli, model yılı, kilometresi, yakıt türü, şanzıman bilgisi ve fiyatı gibi bilgiler bulunmaktadır.
+Araç özellikleri ile satış fiyatı arasındaki doğrusal ilişkileri modellemek amacıyla kullanılmıştır.
+
+### 2. Random Forest Regressor
+
+Birden fazla karar ağacının sonuçlarını birleştirerek fiyat tahmini gerçekleştirmek amacıyla kullanılmıştır.
 
 ## Proje Aşamaları
 
-1. Veri setinin yüklenmesi ve incelenmesi
+1. Veri setinin temin edilmesi ve incelenmesi
 2. Eksik verilerin kontrol edilmesi
-3. Veri türlerinin düzenlenmesi
-4. Ortalama, minimum ve maksimum değerlerin hesaplanması
-5. Verilerin grafiklerle görselleştirilmesi
-6. Makine öğrenmesi modelleriyle araç fiyatlarının tahmin edilmesi
+3. Veri temizleme ve ön işleme
+4. Keşifsel veri analizi ve görselleştirme
+5. Eğitim ve test verilerinin ayrılması
+6. Makine öğrenmesi modellerinin eğitilmesi
+7. Tahmin sonuçlarının elde edilmesi
+8. Model performanslarının karşılaştırılması
 
-## Kullanılan Algoritmalar
+## Model Değerlendirme
 
-- Linear Regression
-- Random Forest
+Modellerin performansları aşağıdaki metrikler kullanılarak değerlendirilmiştir:
 
-## Proje Dosyaları
+- MAE (Mean Absolute Error)
+- RMSE (Root Mean Squared Error)
+- R² (Determination Coefficient)
 
-- `Proje.ipynb`: Veri analizi ve makine öğrenmesi çalışmalarının bulunduğu notebook dosyası.
-- `used_cars.csv`: Projede kullanılan veri seti.
-- `sonuc/`: Analiz sonucunda oluşturulan grafikler ve çıktılar.
+## Proje Ekibi
 
-## Çalıştırma
-
-Proje Google Colab üzerinden çalıştırılabilir. Notebook dosyasını açtıktan sonra veri setini yükleyip kod hücrelerini sırasıyla çalıştırabilirsiniz.
-
-## Ekip Üyeleri ve Katkıları
-
-- **[Arda Fidancı]:** [Görev ve katkı]
-- **[Görkem Yılmaz]:** [Görev ve katkı]
-- **[Burak Kerem Çakubay]:** [Görev ve katkı]
+- Arda Fidancı
+- Görkem Yılmaz
+- Burak Kerem Çakubay
 
 ## Lisans ve Veri Kaynağı
 
-Veri setinin lisans bilgisi Kaggle üzerindeki kaynak sayfasından kontrol edilmelidir.
+Veri seti Kaggle üzerinden temin edilmiştir. Veri setinin lisansı: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+## Proje Yönetimi ve Geliştirme Süreci
+
+Projenin geliştirme süreci GitHub Projects üzerinden Kanban yöntemiyle takip edilmektedir.
+
+[Kanban Panosu](https://github.com/users/ardafidanci52-png/projects/2/views/1)
+
+---
+
+**Proje:** İkinci El Araç Fiyat Tahmin Sistemi  
+**Geliştirme Ortamı:** Google Colab
